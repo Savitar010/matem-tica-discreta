@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Autobiográficos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .math-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .step-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+        .solution-highlight {
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            color: #2d3748;
+            padding: 2rem;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .digit-box {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #667eea;
+            color: white;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .position-label {
+            font-size: 0.8rem;
+            color: #718096;
+            text-align: center;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Cabeçalho -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">🔍 Números Autobiográficos</h1>
+            <p class="text-lg text-gray-600">Descubra o número de 10 dígitos que descreve a si mesmo</p>
+        </div>
+
+      <div class="math-box mb-8">
+            <h2 class="text-2xl font-bold mb-4">O que é um Número Autobiográfico?</h2>
+            <p class="mb-4">Um número autobiográfico é aquele onde cada dígito na posição <em>i</em> indica quantas vezes o dígito <em>i</em> aparece no número.</p>
+            <p>Para um número de 10 dígitos (base 10), temos:</p>
+            <ul class="list-disc list-inside mt-2">
+                <li>Posição 0: quantos zeros existem no número</li>
+                <li>Posição 1: quantos uns existem no número</li>
+                <li>Posição 2: quantos dois existem no número</li>
+                <li>...</li>
+                <li>Posição 9: quantos noves existem no número</li>
+            </ul>
+        </div>
+
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">🎯 Solução Encontrada</h2>
+            
+            <div class="solution-highlight mb-6">
+                <div class="text-sm text-gray-600 mb-2">O número autobiográfico de 10 dígitos é:</div>
+                <div class="flex justify-center items-center flex-wrap">
+                    <div class="m-2">
+                        <div class="digit-box">6</div>
+                        <div class="position-label">X₀</div>
+                    </div>
+                    <div class="m-2">
+                        <div class="digit-box">2</div>
+                        <div class="position-label">X₁</div>
+                    </div>
+                    <div class="m-2">
+                        <div class="digit-box">1</div>
+                        <div class="position-label">X₂</div>
+                    </div>
+                    <div class="m-2">
+                        <div class="digit-box">0</div>
+                        <div class="position-label">X₃</div>
+                    </div>
+                    <div class="m-2">
+                        <div class="digit-box">0</div>
+                        <div class="position-label">X₄</div>
+                    </div>
+                    <div class="m-2">
+                        <div class="digit-box">0</div>
+                        <div class="position-label">X₅</div>
+                    </div>
+                    <div class="m-2">
+                        <div class="digit-box">1</div>
+                        <div class="position-label">X₆</div>
+                    </div>
+                    <div class="m-2">
+                        <div class="digit-box">0</div>
+                        <div class="position-label">X₇</div>
+                    </div>
+                    <div class="m-2">
+                        <div class="digit-box">0</div>
+                        <div class="position-label">X₈</div>
+                    </div>
+                    <div class="m-2">
+                        <div class="digit-box">0</div>
+                        <div class="position-label">X₉</div>
+                    </div>
+                </div>
+                <div class="text-3xl font-mono font-bold mt-4">6210001000</div>
+            </div>
+
+            
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 class="text-lg font-semibold text-green-800 mb-3">✅ Verificação da Solução</h3>
+                <div class="space-y-2 text-sm">
+                    <p>• X₀ = 6 → O número tem 6 zeros ✓</p>
+                    <p>• X₁ = 2 → O número tem 2 uns ✓</p>
+                    <p>• X₂ = 1 → O número tem 1 dois ✓</p>
+                    <p>• X₃ = 0 → O número tem 0 três ✓</p>
+                    <p>• X₄ = 0 → O número tem 0 quatro ✓</p>
+                    <p>• X₅ = 0 → O número tem 0 cinco ✓</p>
+                    <p>• X₆ = 1 → O número tem 1 seis ✓</p>
+                    <p>• X₇ = 0 → O número tem 0 sete ✓</p>
+                    <p>• X₈ = 0 → O número tem 0 oito ✓</p>
+                    <p>• X₉ = 0 → O número tem 0 nove ✓</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">🧠 Como Cheguei a Esta Solução</h2>
+            
+            <div class="step-card">
+                <h3 class="font-semibold text-lg text-blue-800 mb-2">Passo 1: Análise Inicial</h3>
+                <p>Para um número de 10 dígitos autobiográfico, sabemos que:</p>
+                <p class="font-mono bg-gray-100 p-2 rounded mt-2">X₀ + X₁ + X₂ + ... + X₉ = 10</p>
+                <p>E também que a soma dos produtos deve ser 10:</p>
+                <p class="font-mono bg-gray-100 p-2 rounded">0×X₀ + 1×X₁ + 2×X₂ + ... + 9×X₉ = 10</p>
+            </div>
+
+            <div class="step-card">
+                <h3 class="font-semibold text-lg text-blue-800 mb-2">Passo 2: Dedução Lógica</h3>
+                <p>Observando que a soma dos dígitos é 10, e considerando que:</p>
+                <ul class="list-disc list-inside mt-2 ml-4">
+                    <li>X₀ não pode ser 0 (pois senão não teríamos zeros)</li>
+                    <li>A maioria dos dígitos será 0</li>
+                    <li>X₀ deve ser relativamente grande (já que contém muitos zeros)</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h3 class="font-semibold text-lg text-blue-800 mb-2">Passo 3: Teste Sistemático</h3>
+                <p>Testando valores possíveis para X₀:</p>
+                <ul class="list-disc list-inside mt-2 ml-4">
+                    <li>Se X₀ = 6, então temos 6 zeros</li>
+                    <li>X₁ deve contar quantos "1" existem → provavelmente 2</li>
+                    <li>X₂ deve contar quantos "2" existem → provavelmente 1</li>
+                    <li>X₆ deve contar quantos "6" existem → provavelmente 1</li>
+                    <li>Os demais dígitos são 0</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h3 class="font-semibold text-lg text-blue-800 mb-2">Passo 4: Construção do Número</h3>
+                <p>Montando o número com as deduções:</p>
+                <p class="font-mono bg-gray-100 p-2 rounded mt-2">
+                    X₀=6, X₁=2, X₂=1, X₃=0, X₄=0, X₅=0, X₆=1, X₇=0, X₈=0, X₉=0
+                </p>
+                <p class="mt-2">Resultando em: <strong>6210001000</strong></p>
+            </div>
+
+            <div class="step-card">
+                <h3 class="font-semibold text-lg text-blue-800 mb-2">Passo 5: Verificação Final</h3>
+                <p>Contando a ocorrência de cada dígito em 6210001000:</p>
+                <ul class="list-disc list-inside mt-2 ml-4">
+                    <li>0 aparece 6 vezes ✓</li>
+                    <li>1 aparece 2 vezes ✓</li>
+                    <li>2 aparece 1 vez ✓</li>
+                    <li>6 aparece 1 vez ✓</li>
+                    <li>Outros dígitos não aparecem ✓</li>
+                </ul>
+            </div>
+        </div>
+       
+      <div class="mt-8 p-6 bg-blue-50 rounded-lg">
+            <h3 class="text-lg font-semibold text-blue-800 mb-3">💡 Curiosidades</h3>
+            <ul class="list-disc list-inside space-y-2 text-blue-700">
+                <li>6210001000 é o único número autobiográfico de 10 dígitos</li>
+                <li>Existem apenas 4 números autobiográficos conhecidos: 1210, 2020, 21200, e 6210001000</li>
+                <li>Estes números são extremamente raros e interessantes do ponto de vista matemático</li>
+            </ul>
+        </div>
+    </div>
+
+<footer>
+    <p>&copy; 2025 Samuel de sousa silva. Todos os direitos reservados.
+  </footer>
+
+
+</body>
+</html>
